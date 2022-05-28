@@ -190,6 +190,6 @@ matriz2 = [[5,4,1],
 product=np.dot(matriz1,matriz2)
 
 # print resulted matrix
-print (product)
+print ('Multiplicacion ' + str(product))
 
 
