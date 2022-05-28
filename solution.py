@@ -98,3 +98,98 @@ print(x)
 
 visualize(f, x = collectedXs)
 
+#### ## Linear Algebra
+#Exercise 1 : Sum of two matrices
+# importing numpy as np
+import numpy as np
+ 
+# creating first matrix
+a=np.array([[1,2],[3,4]])
+ 
+# creating second matrix
+b=np.array([[4,5],[6,7]])
+ 
+#print elements
+print(a)
+print(b)
+ 
+# adding two matrix
+#suma=a+b
+#print(suma)
+print(np.add(a, b))
+
+### Exercise 2: Sum of two lists
+# Use list comprehensions to perform addition of the two lists:
+
+# initializing lists
+lista1 = [2, 5, 4, 7, 3]
+lista2 = [1, 4, 6, 9, 10]
+
+ 
+# printing original lists
+print('Lista Original 1 '+str(lista1))
+print('Lista Original 2 '+str(lista2))
+
+# using list comprehension to add two list 
+suma = [ lista1[x] + lista2[x] for x in range (len (lista1))]  
+ 
+# printing resultant list 
+print('Suma de lista1 mas lista 2: '+str(suma))
+
+# Use map() + add():
+from operator import add
+
+# initializing lists
+lista1 = [2, 5, 4, 7, 3]
+lista2 = [1, 4, 6, 9, 10]
+ 
+# printing original lists
+print('Lista Original 1 '+str(lista1))
+print('Lista Original 2 '+str(lista2))
+ 
+# using map() + add() to add two list 
+# use map() function with add operator to add the elements of the lists lt1 and lt2  
+suma = list( map (add, lista1, lista2)) # pass the lt1, lt2 and add as the parameters  
+ 
+# printing resultant list 
+print('Suma de lista1 mas lista 2: '+str(suma))
+
+# Use zip() + sum():
+from operator import add
+
+# initializing lists
+lista1 = [2, 5, 4, 7, 3]
+lista2 = [1, 4, 6, 9, 10]
+ 
+# printing original lists
+print('Lista Original 1 '+str(lista1))
+print('Lista Original 2 '+str(lista2))
+
+ 
+# Using zip() + sum() to add two list 
+# use the zip() function and sum() function to group the lists add the lists' lt1 and lt2 with index #wise.
+suma = [sum(i) for i in zip(lista1, lista2 )]  
+ 
+# printing resultant list 
+print('Suma de lista1 mas lista 2: '+str(suma))
+
+### Exercise 3 : Dot multiplication
+
+# Import libraries
+import numpy as np
+ 
+# input two matrices
+matriz1 = [[1,7,3],
+ [ 4,5,2],
+ [ 3,6,1]]
+matriz2 = [[5,4,1],
+ [ 1,2,3],
+ [ 4,5,2]]
+ 
+# This will return dot product
+product=np.dot(matriz1,matriz2)
+
+# print resulted matrix
+print (product)
+
+
